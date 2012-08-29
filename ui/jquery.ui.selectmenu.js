@@ -351,7 +351,7 @@ $.widget("ui.selectmenu", {
 						}
 					})
 					.bind('mouseout.selectmenu blur.selectmenu', function() {
-						if ($(this).is(self._selectedOptionLi().selector)) {
+						if ($(this).attr('aria-selected') == 'true') {
 							$(this).addClass(activeClass);
 						}
 						$(this).removeClass(self.widgetBaseClass + '-item-focus ui-state-hover');
